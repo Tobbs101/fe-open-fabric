@@ -2,8 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
+import productRoutes from "./routes/products.js";
 
 const app = express();
+
+app.use("/products", productRoutes);
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
@@ -28,4 +31,4 @@ mongoose
     process.exit(1);
   });
 
-mongoose.set("strictQuery", true);
+mongoose.set("strictQuery", false);
