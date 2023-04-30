@@ -1,0 +1,32 @@
+<div class="login">
+    <div class="img-container">
+      <img src="../../assets/icons/lock.png" alt="lock" />
+    </div>
+    <input type="text" placeholder="First name *" />
+    <input type="text" placeholder="Last name *" />
+    <input type="email" placeholder="Email *" />
+    <div>
+      <input [type]="showPassword ? 'text' : 'password'" placeholder="Password *" />
+      <button (click)="togglePassword()">
+          <i *ngIf="showPassword" class="fa-regular fa-eye-slash"></i>
+          <i *ngIf="!showPassword" class="fa-regular fa-eye"></i>
+      </button>
+    </div>
+    <div>
+      <input [type]="showPasswordConfirm ? 'text' : 'password'" placeholder="Repeat Password *" />
+      <button (click)="togglePasswordConfirm();showSuccess();">
+          <i *ngIf="showPasswordConfirm" class="fa-regular fa-eye-slash"></i>
+          <i *ngIf="!showPasswordConfirm" class="fa-regular fa-eye"></i>
+      </button>
+    </div>
+    <button class="sign-up">SIGN UP</button>
+    <button class="sign-up">
+      <i class="fa-brands fa-google"></i>
+      <p>GOOGLE SIGN IN</p>
+    </button>
+    <span class="sign-in">
+      <p>ALREADY HAVE AN ACCOUNT?</p>
+      <button id="login" (click)="navigateToLogin()">SIGN IN</button>
+    </span>
+  </div>
+  
