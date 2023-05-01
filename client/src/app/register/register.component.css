@@ -41,10 +41,12 @@
     transition-duration: .3s;
     outline: none;
     margin-bottom: 10px;
+    background-color: #fcf8f8;
 }
 
 .login input:focus{
     padding:7px 14px;
+    background-color: #fff;
 }
 
 .login input:focus {
