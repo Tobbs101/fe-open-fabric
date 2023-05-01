@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import {baseUrl} from '../../url';
 
 @Component({
   selector: 'app-login',
@@ -16,17 +18,43 @@ export class LoginComponent {
   public password: string = '';
   public checkForm: boolean = false;
 
-  constructor(private toastr:ToastrService,private router:Router,private formBuilder: FormBuilder) {
+  constructor(
+    private toastr: ToastrService,
+    private router: Router,
+    private formBuilder: FormBuilder,
+    private http: HttpClient
+  ) {
     this.toastr.toastrConfig.iconClasses = {
       error: 'fa fa-times-circle',
       info: 'fa fa-info-circle',
       success: 'fa fa-check-circle',
-      warning: 'fa fa-exclamation-circle'
+      warning: 'fa fa-exclamation-circle',
     };
+
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
     });
+  }
+
+  submitForm() {
+    const formData = this.loginForm.value;
+    if (this.loginForm.invalid) {
+      this.checkForm = true;
+    } else {
+      this.checkForm = false;
+      this.http.post(`${baseUrl}/api/v1.0/user/login`, formData).subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    }
+    setTimeout(() => {
+      this.checkForm = false;
+    }, 2000);
   }
 
   togglePassword() {
@@ -36,16 +64,6 @@ export class LoginComponent {
 
   showSuccess() {
     this.toastr.success('Success!');
-  }
-
-  check(){
-    console.log(this.loginForm);
-    if(this.loginForm.invalid){
-       this.checkForm = true;
-    } else this.checkForm = false;
-    setTimeout(() => {
-      this.checkForm = false
-    },2000)
   }
 
   navigateToSignUp() {
