@@ -9,19 +9,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'test', component: TestComponent },
   {path:'register', component: RegisterComponent}
 ];
 
 @NgModule({
-  declarations: [AppComponent, TestComponent, LoginComponent, HeaderComponent, RegisterComponent],
+  declarations: [AppComponent, LoginComponent, HeaderComponent, RegisterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -56,11 +56,13 @@ form {
     transition-duration: .3s;
     outline: none;
     margin-bottom: 20px;
+    background-color: #fcf8f8;
 }
 
 .login input:focus {
     border: 1px solid var(--primary-color);
     padding: 7px 14px;
+    background-color: #fff;
 }
 
 .login .sign-up {
