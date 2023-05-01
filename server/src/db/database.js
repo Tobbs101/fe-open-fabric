@@ -17,7 +17,7 @@ module.exports = {
   HOST: "localhost",
   USER: "root",
   PASSWORD: "",
-  DB: "heroku_7167f9aaa257fa6",
+  DB: "open-fabric",
   dialect: "mysql",
   pool: {
     max: 5,
