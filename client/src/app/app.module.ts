@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -21,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HeaderComponent, RegisterComponent, ProductsComponent],
+  declarations: [AppComponent, LoginComponent, HeaderComponent, RegisterComponent, ProductsComponent, ProductComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
