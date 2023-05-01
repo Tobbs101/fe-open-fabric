@@ -12,14 +12,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  {path:'register', component: RegisterComponent}
+  {path:'register', component: RegisterComponent},
+  {path:'products',component: ProductsComponent}
 ];
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HeaderComponent, RegisterComponent],
+  declarations: [AppComponent, LoginComponent, HeaderComponent, RegisterComponent, ProductsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
