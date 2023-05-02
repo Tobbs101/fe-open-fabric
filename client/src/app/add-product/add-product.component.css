@@ -1,0 +1,44 @@
+.add-products {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+form {
+    width: 100%;
+}
+
+form div {
+text-align: left;
+}
+
+label {
+    color: var(--primary-color);
+    font-size:12px;
+}
+
+form input,select,textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    transition-duration: .3s;
+    outline: none;
+    margin-bottom: 20px;
+    background-color: #fcf8f8;
+}
+
+form input:focus,select:focus {
+    border: 1px solid var(--primary-color);
+    padding: 7px 14px;
+    background-color: #fff;
+}
