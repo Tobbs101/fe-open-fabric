@@ -5,7 +5,7 @@ const db = require("../model");
 const Product = db.product;
 const auth = require("../middleware/auth");
 
-Router.get("/api/v1.0/product/all", async (req, res) => {
+Router.get("/api/v1.0/product/all", auth, async (req, res) => {
   try {
     const product = await Product.findAll();
     return res.status(200).send({ success: false, product });
