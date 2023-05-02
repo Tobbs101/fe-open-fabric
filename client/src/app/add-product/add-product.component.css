@@ -19,6 +19,13 @@
     font-weight: 500;
 }
 
+.error-success{
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: greenyellow;
+    font-weight: 500;
+}
+
 form {
     width: 100%;
 }

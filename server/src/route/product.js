@@ -14,6 +14,42 @@ Router.get("/api/v1.0/product/all", auth, async (req, res) => {
   }
 });
 
+Router.post("/api/v1.0/product", auth, async (req, res) => {
+  try {
+    const {
+      productTitle,
+      productDescription,
+      productPrice,
+      productAvailability,
+    } = req.body;
+
+    if (
+      productTitle === "" ||
+      productDescription === "" ||
+      productPrice === "" ||
+      productAvailability === ""
+    ) {
+      return res.status(400).json({ error: "Invalid product details..." });
+    }
+
+    const newProduct = {
+      productTitle: productTitle,
+      productDescription: productDescription,
+      productPrice: productPrice,
+      productAvailability: productAvailability,
+    };
+
+    const savedProduct = await Product.create(newProduct);
+
+    res.status(201).json(savedProduct);
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while creating the product" });
+  }
+});
+
 Router.patch("/api/v1.0/product/:id", auth, async (req, res) => {
   try {
     const checkProduct = await Product.findOne({

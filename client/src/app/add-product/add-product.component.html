@@ -13,14 +13,17 @@
             <input type="number" formControlName="productPrice" id="price" placeholder="Price *" />
         </div>
         <div>
-            <label>Product Title</label>
+            <label>Product Available?</label>
             <select formControlName="productAvailable">
                 <option value=true>Yes</option>
                 <option value=false>No</option>
             </select>
         </div>
-        <div style="height: 30px;display: flex;align-items: center;justify-content: center;">
+        <div style="height: 15px;display: flex;align-items: center;justify-content: center;">
             <span *ngIf="checkForm" class="error-alert">Kindly fill all fields appropriately...</span>
+          </div>
+          <div style="height: 15px;display: flex;align-items: center;justify-content: center;">
+            <span *ngIf="checkProduct" class="error-success">Product added successfully...</span>
           </div>
         <button (click)="submitForm()">ADD PRODUCT</button>
     </form>
