@@ -38,6 +38,10 @@ export class ProductsComponent {
     this.router.navigate(['/add-product']);
   }
 
+  routetoView(id: number){
+    this.router.navigate(['/products', id]);
+  }
+
   ngOnInit(): void {
     const token = sessionStorage.getItem('token');
     this.http

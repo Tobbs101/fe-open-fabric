@@ -16,8 +16,12 @@
     <div class="product-list">
       <div class="product" *ngFor="let product of products">
         <h3>{{ product.productName.toUpperCase() }}</h3>
-        <p>Description: {{ product.productDescription }}</p>
-        <p>Price: {{ product.productPrice }}</p>
+        <p>DESCRIPTION: {{ product.productDescription }}</p>
+        <div class="footer">
+            <p class="price">PRICE: {{ product.productPrice }}</p>
+            <button (click)="routetoView(product.id)">View Product</button>
+        </div>
+        
       </div>
     </div>
   </div>
