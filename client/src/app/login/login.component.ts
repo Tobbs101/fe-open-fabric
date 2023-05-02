@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
 import {baseUrl} from '../../url';
 import { DataService } from '../data.service';
 
+interface LoginResponse {
+  token: string;
+}
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -45,10 +48,12 @@ export class LoginComponent {
       this.checkForm = true;
     } else {
       this.checkForm = false;
-      this.http.post(`${baseUrl}/api/v1.0/user/login`, formData).subscribe(
+      this.http.post<LoginResponse>(`${baseUrl}/api/v1.0/user/login`, formData).subscribe(
         (response) => {
           console.log(response);
           this.dataService.setData(response);
+          const Token = response.token;
+          sessionStorage.setItem('token',Token);
           this.router.navigate(['/products']);
         },
         (error) => {

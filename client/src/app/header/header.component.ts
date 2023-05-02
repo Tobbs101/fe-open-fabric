@@ -13,7 +13,6 @@ export class HeaderComponent {
   constructor (private router:Router,private dataService:DataService){
     this.dataService.getData().subscribe((data) => {
       this.userData = data;
-      console.log('data',data);
     });
   }
 
