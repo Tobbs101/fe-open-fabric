@@ -8,15 +8,16 @@ const db = require("./model");
 var userRouter = require("./route/user");
 var productRouter = require("./route/product");
 
-const corsOptions = {
-  origin: "http://localhost:4200",
-  // credentials: true,
-  // optionSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: "*",
+//   credentials: true, //access-control-allow-credentials:true
+//   optionSuccessStatus: 200,
+// };
 var app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb" }));
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger("dev"));
 app.use(express.json());

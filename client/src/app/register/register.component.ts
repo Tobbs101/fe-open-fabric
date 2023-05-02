@@ -70,6 +70,7 @@ export class RegisterComponent {
       this.http.post(`${baseUrl}/api/v1.0/user/create`, formData).subscribe(
         (response) => {
           console.log(response);
+          this.router.navigate(['/']);
         },
         (error) => {
           console.log(error);
