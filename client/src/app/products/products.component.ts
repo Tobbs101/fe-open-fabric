@@ -55,7 +55,6 @@ export class ProductsComponent {
       .subscribe(
         (data) => {
           this.products = data.product;
-          console.log('p', this.products);
           this.isLoaded = true;
         },
         (error) => {

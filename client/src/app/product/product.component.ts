@@ -26,7 +26,6 @@ export class ProductComponent {
     if(currentProductJson && currentProductJson !== null){
       const currentProduct = JSON.parse(currentProductJson);
       this.Product = currentProduct;
-      console.log(this.Product);
     }
   }
 }

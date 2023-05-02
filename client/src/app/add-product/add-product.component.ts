@@ -28,6 +28,10 @@ export class AddProductComponent {
     });
   }
 
+  viewProducts(){
+    this.router.navigate(['/products']);
+  }
+
   submitForm() {
     const formData = this.newProduct.value;
     if (this.newProduct.invalid) {

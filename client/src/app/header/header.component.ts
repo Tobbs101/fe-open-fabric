@@ -19,11 +19,9 @@ export class HeaderComponent {
     const userJson = sessionStorage.getItem('user');
     if (userJson && userJson !== null) {
       const user = JSON.parse(userJson);
-      console.log(user);
      return this.userData = user;
     }
     this.dataService.getData().subscribe((data) => {
-      console.log(data);
       this.userData = data;
     });
   }

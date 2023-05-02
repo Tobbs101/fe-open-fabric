@@ -12,6 +12,21 @@
     gap:10px;
 }
 
+.view-products{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.view-products button {
+    border: 1px solid var(--primary-color);
+    font-size: 12px;
+    background-color: var(--primary-color);
+    padding: 5px 15px;
+    color:#fff;
+}
+
 .error-alert{
     font-size: 12px;
     margin-bottom: 10px;
