@@ -25,6 +25,16 @@ label {
     font-size:12px;
 }
 
+form button {
+    background-color:var(--primary-color);
+    font-size: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 0;
+    color:#fff;
+    width: 100%;
+}
+
 form input,select,textarea {
     border: 1px solid #ccc;
     width: 100%;
@@ -37,7 +47,7 @@ form input,select,textarea {
     background-color: #fcf8f8;
 }
 
-form input:focus,select:focus {
+form input:focus,select:focus,textarea:focus {
     border: 1px solid var(--primary-color);
     padding: 7px 14px;
     background-color: #fff;
