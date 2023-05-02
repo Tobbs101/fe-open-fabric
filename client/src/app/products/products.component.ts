@@ -32,6 +32,10 @@ export class ProductsComponent {
     });
   }
 
+  routeToAdd(){
+    this.router.navigate(['/add-product']);
+  }
+
   ngOnInit(): void {
     const token = sessionStorage.getItem('token');
     this.http
