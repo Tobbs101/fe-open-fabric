@@ -62,7 +62,7 @@ export class RegisterComponent {
     setTimeout(() => {
     const formData = this.registerForm.value;
     if (this.registerForm.invalid){
-      this.toastr.error('Kindly fill form correctly...')
+      this.checkForm = true;
     } else if (this.checkPasswords === false){
       this.toastr.error("Passwords don't match!");
     } else {

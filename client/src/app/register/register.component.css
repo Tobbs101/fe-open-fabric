@@ -3,6 +3,13 @@
     color: var(--secondary-color);
 }
 
+.error-alert{
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
 .login {
     max-width: 500px;
     margin: 50px auto;
