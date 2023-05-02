@@ -76,7 +76,7 @@ export class RegisterComponent {
         }
       );
     }
-  },2000)
+  },500)
   }
 
   showSuccess() {
