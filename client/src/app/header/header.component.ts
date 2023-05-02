@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor (private router:Router){}
+  userData:any;
+
+  constructor (private router:Router,private dataService:DataService){
+    this.dataService.getData().subscribe((data) => {
+      this.userData = data;
+      console.log('data',data);
+    });
+  }
 
   navigateToLogin() {
     this.router.navigate(['/']);
+    this.dataService.setData('');
   }
 }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {baseUrl} from '../../url';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,8 @@ export class LoginComponent {
     private toastr: ToastrService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private dataService: DataService
   ) {
     this.toastr.toastrConfig.iconClasses = {
       error: 'fa fa-times-circle',
@@ -46,9 +48,12 @@ export class LoginComponent {
       this.http.post(`${baseUrl}/api/v1.0/user/login`, formData).subscribe(
         (response) => {
           console.log(response);
+          this.dataService.setData(response);
+          this.router.navigate(['/products']);
         },
         (error) => {
           console.error(error);
+          this.toastr.error('Unable to login, please confirm credentials...')
         }
       );
     }

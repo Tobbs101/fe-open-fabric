@@ -1,7 +1,14 @@
 <div class="header">
-    <span>
-        <h1>OPEN FABRIC</h1>
-        <img src="../../assets/icons/logo.png" alt="logo">
-    </span>
-    <button (click)="navigateToLogin()">SIGN IN</button>
+  <span>
+    <h1>OPEN FABRIC</h1>
+    <img src="../../assets/icons/logo.png" alt="logo" />
+  </span>
+  <div>
+    <span *ngIf="userData"
+      ><img src="../../assets/icons/user.png" alt="user" />
+      <p>{{ userData.user.firstName }} {{ userData.user.lastName }}</p></span
+    >
+    <button *ngIf="!userData" (click)="navigateToLogin()">SIGN IN</button>
+    <button *ngIf="userData" (click)="navigateToLogin()">SIGN OUT</button>
+  </div>
 </div>

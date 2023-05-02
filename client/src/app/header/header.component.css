@@ -17,6 +17,28 @@
     justify-content: center;
     gap: 5px;
 }
+.header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.header div span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.header div span img {
+    height: 24px;
+    width: 24px;
+}
+
+.header div span p {
+    font-size: 12px;
+}
 
 @media (max-width: 768px) {
     .header {
