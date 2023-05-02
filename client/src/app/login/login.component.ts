@@ -54,6 +54,7 @@ export class LoginComponent {
           this.dataService.setData(response);
           const Token = response.token;
           sessionStorage.setItem('token',Token);
+          sessionStorage.setItem('user',JSON.stringify(response));
           this.router.navigate(['/products']);
         },
         (error) => {
