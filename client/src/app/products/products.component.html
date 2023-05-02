@@ -15,9 +15,9 @@
     </div>
     <div class="product-list">
       <div class="product" *ngFor="let product of products">
-        <h3>{{ product.productName }}</h3>
-        <p>{{ product.productDescription }}</p>
-        <p>{{ product.productPrice }}</p>
+        <h3>{{ product.productName.toUpperCase() }}</h3>
+        <p>Description: {{ product.productDescription }}</p>
+        <p>Price: {{ product.productPrice }}</p>
       </div>
     </div>
   </div>

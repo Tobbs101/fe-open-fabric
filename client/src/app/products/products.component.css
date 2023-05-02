@@ -26,14 +26,30 @@
 
 .view-products .product-list {
     margin-top: 30px;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap:20px;
 }
 
 .view-products .product-list .product {
+    border:1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 7px;
+}
 
+.view-products .product-list .product h3 {
+    border: 1px dotted #ccc;
+    width:100%;
+    border-radius: 5px;
+    padding: 4px 0;
+    box-shadow: 0 0 5px 0 #ccc inset;
+    font-weight: 500;
 }
 
 #no-data{
