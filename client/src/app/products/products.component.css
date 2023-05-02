@@ -8,3 +8,37 @@
     box-shadow: 0 0 5px 0 #ccc;
     border-radius: 5px;
 }
+
+#no-data{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#no-data span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+
+#no-data button {
+    border: 1px solid var(--primary-color);
+    width:fit-content;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    padding: 3px 10px;
+    color:#fff;
+}
+
+#no-data span p {
+    font-size: 12px;
+}
+
+#no-data span img {
+    height: 32px;
+    width: 32px;
+}
