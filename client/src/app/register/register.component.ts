@@ -59,6 +59,7 @@ export class RegisterComponent {
     console.log('form',this.registerForm);
     console.log('form',this.registerForm.invalid);
     this.checkPassword();
+    
     setTimeout(() => {
     const formData = this.registerForm.value;
     if (this.registerForm.invalid){
@@ -67,6 +68,7 @@ export class RegisterComponent {
       this.toastr.error("Passwords don't match!");
     } else {
       this.checkPasswords = true;
+      this.toastr.success('Processing...');
       this.http.post(`${baseUrl}/api/v1.0/user/create`, formData).subscribe(
         (response) => {
           console.log(response);
@@ -74,6 +76,7 @@ export class RegisterComponent {
         },
         (error) => {
           console.log(error);
+          this.toastr.error('Unable to register, please try again...')
         }
       );
     }
