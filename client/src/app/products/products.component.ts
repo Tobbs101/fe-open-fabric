@@ -22,6 +22,8 @@ interface ProductResponse {
 export class ProductsComponent {
   public products: Array<Product> = [];
   public userData: any;
+  public isLoaded: boolean = false;
+
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -49,9 +51,11 @@ export class ProductsComponent {
         (data) => {
           this.products = data.product;
           console.log('p', this.products);
+          this.isLoaded = true;
         },
         (error) => {
           console.log('Error fetching products:', error);
+          this.isLoaded = true;
           if (error.status === 401) {
             this.router.navigate(['/']);
           }

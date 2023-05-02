@@ -1,5 +1,5 @@
 <div class="products">
-    <div id="no-data" *ngIf="products.length < 1">
+    <div id="no-data" *ngIf="isLoaded && products.length < 1">
         <span>
             <img src="../../assets/icons/exclamation-mark.png" alt="exclamation-mark">
         <p>No products to display</p>
