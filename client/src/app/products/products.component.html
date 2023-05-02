@@ -1,9 +1,12 @@
 <div class="products">
-    <div id="no-data" *ngIf="isLoaded && products.length < 1">
-        <span>
-            <img src="../../assets/icons/exclamation-mark.png" alt="exclamation-mark">
-        <p>No products to display</p>
-        </span>
-        <button (click)='routeToAdd()'>Add New Product</button>
-    </div>
+  <div id="no-data" *ngIf="isLoaded && products.length < 1">
+    <span>
+      <img
+        src="../../assets/icons/exclamation-mark.png"
+        alt="exclamation-mark"
+      />
+      <p>No products to display</p>
+    </span>
+    <button (click)="routeToAdd()">Add New Product</button>
+  </div>
 </div>
