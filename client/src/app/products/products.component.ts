@@ -6,9 +6,9 @@ import { DataService } from '../data.service';
 
 interface Product {
   id: number;
-  name: string;
-  description: string;
-  price: number;
+  productName: string;
+  productDescription: string;
+  productPrice: number;
 }
 
 interface ProductResponse {

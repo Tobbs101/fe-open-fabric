@@ -9,4 +9,16 @@
     </span>
     <button (click)="routeToAdd()">Add New Product</button>
   </div>
+  <div class="view-products">
+    <div class="add-product">
+      <button (click)="routeToAdd()">Add New Product</button>
+    </div>
+    <div class="product-list">
+      <div class="product" *ngFor="let product of products">
+        <h3>{{ product.productName }}</h3>
+        <p>{{ product.productDescription }}</p>
+        <p>{{ product.productPrice }}</p>
+      </div>
+    </div>
+  </div>
 </div>

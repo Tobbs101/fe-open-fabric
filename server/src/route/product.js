@@ -17,14 +17,14 @@ Router.get("/api/v1.0/product/all", auth, async (req, res) => {
 Router.post("/api/v1.0/product", auth, async (req, res) => {
   try {
     const {
-      productTitle,
+      productName,
       productDescription,
       productPrice,
       productAvailability,
     } = req.body;
 
     if (
-      productTitle === "" ||
+      productName === "" ||
       productDescription === "" ||
       productPrice === "" ||
       productAvailability === ""
@@ -33,7 +33,7 @@ Router.post("/api/v1.0/product", auth, async (req, res) => {
     }
 
     const newProduct = {
-      productTitle: productTitle,
+      productName: productName,
       productDescription: productDescription,
       productPrice: productPrice,
       productAvailability: productAvailability,
