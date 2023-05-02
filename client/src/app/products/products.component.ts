@@ -38,7 +38,8 @@ export class ProductsComponent {
     this.router.navigate(['/add-product']);
   }
 
-  routetoView(id: number){
+  routetoView(id: number,product: Product){
+    sessionStorage.setItem('currentProduct', JSON.stringify(product));
     this.router.navigate(['/products', id]);
   }
 
