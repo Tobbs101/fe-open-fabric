@@ -19,7 +19,8 @@ import { AddProductComponent } from './add-product/add-product.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path:'register', component: RegisterComponent},
-  {path:'products',component: ProductsComponent}
+  {path:'products',component: ProductsComponent},
+  {path:'add-product',component: AddProductComponent}
 ];
 
 @NgModule({
