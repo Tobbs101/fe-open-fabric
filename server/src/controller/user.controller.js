@@ -7,11 +7,11 @@ exports.create = (req, res) => {
   if (
     !req.body.email ||
     !req.body.password ||
-    !req.body.lastName ||
-    !req.body.firstName
+    !req.body.firstName ||
+    !req.body.lastName
   ) {
     res.status(400).send({
-      message: "Missing fields...",
+      message: "Some fields are missing...",
     });
     return;
   }

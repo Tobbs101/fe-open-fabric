@@ -1,1 +1,1 @@
-export const baseUrl:String = "localhost:4000";
+export const baseUrl: String = "localhost:4000";
