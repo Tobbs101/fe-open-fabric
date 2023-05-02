@@ -18,3 +18,18 @@
     padding: 4px 10px;
     color: #fff;
 }
+
+.product div {
+    text-align: left;
+    border-top:1px dotted #ccc;
+    border-left: 1px dotted #ccc;
+    width:100%;
+    padding: 5px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.product p {
+    font-size: 12px;
+}
