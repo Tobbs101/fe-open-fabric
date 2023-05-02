@@ -77,6 +77,9 @@ export class RegisterComponent {
       );
     }
   },500)
+  setTimeout(() => {
+    this.checkForm = false;
+  }, 2000);
   }
 
   showSuccess() {
