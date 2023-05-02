@@ -19,6 +19,9 @@
                 <option value=false>No</option>
             </select>
         </div>
-        <button>ADD PRODUCT</button>
+        <div style="height: 30px;display: flex;align-items: center;justify-content: center;">
+            <span *ngIf="checkForm" class="error-alert">Kindly fill all fields appropriately...</span>
+          </div>
+        <button (click)="submitForm()">ADD PRODUCT</button>
     </form>
 </div>

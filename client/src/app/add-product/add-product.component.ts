@@ -12,6 +12,8 @@ import {baseUrl} from '../../url';
 export class AddProductComponent {
   newProduct: FormGroup;
 
+  public checkForm: boolean = false;
+
   constructor(private formBuilder:FormBuilder){
     this.newProduct = this.formBuilder.group({
       productName:['', Validators.required],
@@ -21,6 +23,15 @@ export class AddProductComponent {
     })
   }
 
-  
+  submitForm(){
+    const formData = this.newProduct.value;
+    if(this.newProduct.invalid){
+      console.log({formData});
+      this.checkForm = true;
+    } else {
+      console.log({formData});
+      this.checkForm = false;
+    }
+  }
 
 }
