@@ -35,12 +35,9 @@ export class AddProductComponent {
   submitForm() {
     const formData = this.newProduct.value;
     if (this.newProduct.invalid) {
-      console.log({ formData });
-      this.checkForm = true;
+      window.alert('Some fields are missing or invalid');
     } else {
       const token = sessionStorage.getItem('token');
-      console.log({ formData });
-      this.checkForm = false;
       this.http
         .post(`${baseUrl}/api/v1.0/product`,formData, {
           headers: {
@@ -50,9 +47,9 @@ export class AddProductComponent {
         })
         .subscribe(
           (response) => {
-            console.log(response);
+            window.alert('Product added successfully');
             setTimeout(() => {this.router.navigate(['/products']);
-            },2000);
+            },1000);
             this.checkProduct = true;
           },
           (error) => {

@@ -59,6 +59,7 @@ export class ProductsComponent {
         },
         (error) => {
           console.log('Error fetching products:', error);
+          window.alert('Error fetching products');
           this.isLoaded = true;
           if (error.status === 401) {
             this.router.navigate(['/']);
