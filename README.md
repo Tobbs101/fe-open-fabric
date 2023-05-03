@@ -1,13 +1,28 @@
-# Open Fabric Test
+# Frontend - Open Fabric Test
 
-## How to run
+This is a front-end application written in Angular with Tailwind CSS that retrieves products and allows users to add new products.
 
-- Clone Repo code
-- Run npm install on terminal
-- Run ng serve to start local node server
+## Installation
 
-## Technology
+- Clone this repository to your local machine.
+- Run `npm install` on terminal.
+
+## Usage
+
+- Run `ng-serve` to start the development server.
+- Navigate to `http://localhost:4200` in your web browser.
+
+## Features
+
+- View a list of products.
+- Add a new product.
+- Naviagte between product list and product detail pages.
+
+## Technologies Used
 
 - AngularJS.
+- Tailwind CSS.
+- HTML.
 - CSS.
-- Node JS.
+- TypeScript.
+- Angular Router.
