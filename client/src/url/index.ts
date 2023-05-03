@@ -1,1 +1,1 @@
-export const baseUrl: String = "https://open-fabric.uw.r.appspot.com";
+export const baseUrl: String = "https://open-fabric.onrender.com";

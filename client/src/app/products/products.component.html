@@ -9,7 +9,7 @@
     </span>
     <button (click)="routeToAdd()">Add New Product</button>
   </div>
-  <div class="view-products">
+  <div *ngIf="isLoaded && products.length > 0" class="view-products">
     <div class="add-product">
       <button (click)="routeToAdd()">Add New Product</button>
     </div>
