@@ -16,7 +16,7 @@ This is a front-end application written in Angular with Tailwind CSS that retrie
 
 - View a list of products.
 - Add a new product.
-- Naviagte between product list and product detail pages.
+- Navigate between product list and product detail pages.
 
 ## Technologies Used
 
